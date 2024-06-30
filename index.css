@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #095b80;
+}
+.wrapper{
+  width: 97%;
+  max-width: 450px;
+  background: #fff;
+  padding: 30px 15px 35px;
+  border-radius: 7px;
+}
+.wrapper :where(input,select,button){
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+textarea{
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 260px;
+  resize: none;
+  border: 1px solid #ccc;
+  padding: 8px 13px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+.file_options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.file_options .option:nth-child(1){
+  width: 60%;
+}
+.file_options .option:nth-child(2){
+  width: 38%;
+}
+.option :where(input,.save_options){
+  height: 45px;
+  padding: 0 10px;
+  margin-top: 6px;
+  border: 1px solid #bfbfbf;
+}
+.save_options select {
+  height: 45px;
+  background: transparent;
+  font-size: 13px;
+  
+}
+
+button{
+  padding: 10px 15px;
+  background: #095b80;
+  color: #fff;
+  margin-top: 15px;
+  opacity: .6;
+  pointer-events: none;
+}
+.wrapper textarea:valid ~ button{
+  opacity: 1;
+  pointer-events: auto;
+}
